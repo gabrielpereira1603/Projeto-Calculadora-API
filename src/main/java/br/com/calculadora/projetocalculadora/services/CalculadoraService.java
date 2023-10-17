@@ -37,14 +37,8 @@ public class CalculadoraService {
         throw new NumeroInvalidoException("Um ou ambos os valores não são numéricos");
     }
 
-    public Double potencia(String base, String expoente) {
-        if (eNumero(base) && eNumero(expoente)) {
-            Double baseDouble = Double.parseDouble(base);
-            Double expoenteDouble = Double.parseDouble(expoente);
-            
-            return Math.pow(baseDouble, expoenteDouble);
-        }
-        throw new NumeroInvalidoException("A base e o expoente devem ser valores numéricos");
+    public Double potencia(Double base, Double expoente) {
+        return Math.pow(base, expoente);
     }
 
     private Boolean eNumero(String numero) {

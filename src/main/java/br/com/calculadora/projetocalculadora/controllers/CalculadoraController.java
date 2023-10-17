@@ -41,8 +41,8 @@ public class CalculadoraController {
         // Converter base e expoente para double, pois podem ser números com casas decimais
         Double baseDouble = Double.parseDouble(base);
         Double expoenteDouble = Double.parseDouble(expoente);
-        
-        // Realizar o cálculo de potência
-        return Math.pow(baseDouble, expoenteDouble);
+
+        // Chamar o método da CalculadoraService para calcular a potência
+        return calculadoraService.potencia(baseDouble, expoenteDouble);
     }
 }
